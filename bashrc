@@ -7,3 +7,9 @@ source ~/.bash/config
 if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
+
+alias g='git'
+
+#Autocomplete for 'g'
+complete -o default -o nospace -F -git g
+
