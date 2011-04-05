@@ -145,7 +145,8 @@ imap <C-F> <C-R>=expand("%")<CR>
 " Maps autocomplete to tab
 imap <Tab> <C-N>
 
-imap <C-L> <Space>=><Space>
+"imap <C-L> <Space>=><Space>
+vmap <C-ws> <C-wn>
 
 " Display extra whitespace
 " set list listchars=tab:»·,trail:·
@@ -205,3 +206,5 @@ function! OpenURL()
 endfunction
 map <Leader>w :call OpenURL()<CR>
 
+set background=dark
+colorscheme solarized
