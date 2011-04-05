@@ -20,3 +20,16 @@
 	token = <%= print("GitHub API Token: "); STDOUT.flush; STDIN.gets.chomp %>
 [color]
   ui = auto
+[advice]
+  pushNonFastForward = false
+[diff]
+  renames = copies
+  mnemonicprefix = true
+[branch]
+  autosetupmerge = true
+[push]
+  default = tracking
+[rerere]
+  enabled = true
+[merge]
+  stat = true

@@ -11,5 +11,5 @@ fi
 alias g='git'
 
 #Autocomplete for 'g'
-complete -o default -o nospace -F -git g
+#complete -o default -o nospace -F -git g
 
