@@ -1,1 +1,0 @@
-/home/rtremaine/.dotfiles/gvimrc
