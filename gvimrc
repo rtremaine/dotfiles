@@ -6,3 +6,4 @@ colorscheme solarized
 
 "set guifont=DejaVu\ Sans\ Mono:h13
 set guifont=Consolas
+
