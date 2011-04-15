@@ -176,7 +176,7 @@ set numberwidth=5
 " disable edited buffer warning
 set hidden
 " change to dir of current file
-set autochdir
+" set autochdir
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
