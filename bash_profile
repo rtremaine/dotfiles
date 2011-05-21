@@ -7,5 +7,9 @@ if [ -f /etc/bash_completion ]; then
 fi
 
 if [ -f /opt/local/etc/bash_completion ]; then
-    . /opt/local/etc/bash_completion
+  . /opt/local/etc/bash_completion
 fi 
+
+if [ -f /opt/local/bin/ ]; then
+  . /opt/local/bin/
+fi

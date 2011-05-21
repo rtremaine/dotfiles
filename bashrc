@@ -8,6 +8,8 @@ if [ -f ~/.localrc ]; then
   source ~/.localrc
 fi
 
+export PATH=$PATH:/opt/local/bin/
+
 alias g='git'
 
 #Autocomplete for 'g'
