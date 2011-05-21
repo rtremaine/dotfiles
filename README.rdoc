@@ -1,4 +1,6 @@
 == Prereqs
+  install vim, or gvim, or mvim, etc
+
   install bash completion
     macports: sudo port install bash-completion
     homebrew: brew install bash-completion
