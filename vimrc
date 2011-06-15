@@ -148,6 +148,16 @@ imap <Tab> <C-N>
 "imap <C-L> <Space>=><Space>
 vmap <C-ws> <C-wn>
 
+"tab navigation like firefox
+nmap <C-S-tab> :tabprevious<CR>
+nmap <C-tab> :tabnext<CR>
+map <C-S-tab> :tabprevious<CR>
+map <C-tab> :tabnext<CR>
+imap <C-S-tab> <Esc>:tabprevious<CR>i
+imap <C-tab> <Esc>:tabnext<CR>i
+nmap <C-t> :tabnew<CR>
+imap <C-t> <Esc>:tabnew<CR>
+
 " Display extra whitespace
 " set list listchars=tab:»·,trail:·
 
