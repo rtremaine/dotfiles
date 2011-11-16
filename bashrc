@@ -9,10 +9,13 @@ if [ -f ~/.localrc ]; then
 fi
 
 export PATH=$PATH:/opt/local/bin/
-export rvm_path="/Users/rtremaine/.rvm"
+export rvm_path="/home/rtremaine/.rvm"
 
 alias g='git'
 
 #Autocomplete for 'g'
 #complete -o default -o nospace -F -git g
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # This loads RVM into a shell session.
+#if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
+
+#fi
