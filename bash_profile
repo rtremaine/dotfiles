@@ -13,3 +13,4 @@ fi
 if [ -f /opt/local/bin/ ]; then
   . /opt/local/bin/
 fi
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm" # Load RVM function

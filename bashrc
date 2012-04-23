@@ -9,7 +9,7 @@ if [ -f ~/.localrc ]; then
 fi
 
 export PATH=$PATH:/opt/local/bin/
-export rvm_path="/home/rtremaine/.rvm"
+#export rvm_path="/home/rtremaine/.rvm"
 
 alias g='git'
 
@@ -19,3 +19,5 @@ alias g='git'
 #if [[ -s $HOME/.rvm/scripts/rvm ]] ; then source $HOME/.rvm/scripts/rvm ; fi
 
 #fi
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
