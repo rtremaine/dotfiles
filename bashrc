@@ -9,7 +9,7 @@ if [ -f ~/.localrc ]; then
 fi
 
 export PATH=$PATH:/opt/local/bin/
-export rvm_path="/Users/rtremaine/.rvm"
+#export rvm_path="/home/rtremaine/.rvm"
 
 alias g='git'
 
