@@ -207,6 +207,8 @@ set tags=./tags;
 
 let g:fuf_splitPathMatching=1
 
+let processing_doc_path = "/Applications/Processing.app/Contents/Resources/Java/modes/java/reference"
+
 " Open URL
 command -bar -nargs=1 OpenURL :!open <args>
 function! OpenURL()
