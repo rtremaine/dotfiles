@@ -63,6 +63,8 @@ if has("autocmd")
   " Automatically load .vimrc source when saved
   autocmd BufWritePost .vimrc source $MYVIMRC
 
+  autocmd vimenter * NERDTree
+
   augroup END
 
 else
@@ -109,6 +111,7 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
+map <Leader>r :NERDTreeFind<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
