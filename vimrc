@@ -14,6 +14,7 @@ set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
 
+"dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 " Don't use Ex mode, use Q for formatting
 map Q gq
 
@@ -111,7 +112,8 @@ map <Leader>sc :RScontroller
 map <Leader>sv :RSview 
 map <Leader>su :RSunittest 
 map <Leader>sf :RSfunctionaltest 
-map <Leader>r :NERDTreeFind<CR>
+map <Leader>r :Rtree<CR>
+map <Leader>f :NERDTreeFind<CR>
 
 " Hide search highlighting
 map <Leader>h :set invhls <CR>
@@ -228,11 +230,22 @@ map <Leader>w :call OpenURL()<CR>
 set background=dark
 colorscheme solarized
 
-" noremap  <Up> ""
-" noremap! <Up> <Esc>
-" noremap  <Down> ""
-" noremap! <Down> <Esc>
-" noremap  <Left> ""
-" noremap! <Left> <Esc>
-" noremap  <Right> ""
-" noremap! <Right> <Esc>
+" commands to maximize the window
+" <Leader>mm is how I like it on my 13" macbook air
+function! Maximize()
+  if has("gui_running")
+    " GUI is running or is about to start.
+    " Maximize gvim window.
+    set lines=999 columns=999
+  else
+    " This is console Vim.
+    if exists("+lines")
+      set lines=50
+    endif
+    if exists("+columns")
+      set columns=100
+    endif
+  endif
+endfunction
+map <Leader>m :call Maximize()<CR>
+map <Leader>mm :set lines=65 columns=225<CR>
