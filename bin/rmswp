@@ -1,1 +1,3 @@
+echo "find . -type f -name \"*.swp\" -delete"
 find . -type f -name "*.swp" -delete
+echo "done"
