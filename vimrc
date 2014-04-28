@@ -142,7 +142,7 @@ vmap P p :call setreg('"', getreg('0')) <CR>
 au! BufRead,BufNewFile *.haml         setfiletype haml
 au! BufRead,BufNewFile *.ejs          setfiletype html
 " for handlebars
-au! BufRead,BufNewFile *.hjs          setfiletype html
+"au! BufRead,BufNewFile *.hjs          setfiletype html
 "au BufRead,BufNewFile *.handlebars,*.hbs set ft=html syntax=handlebars
 
 " No Help, please
