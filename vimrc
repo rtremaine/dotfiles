@@ -184,6 +184,9 @@ if executable("ack")
   set grepprg=ack\ -H\ --nogroup\ --nocolor\ --ignore-dir=tmp\ --ignore-dir=coverage
 endif
 
+" set location of vim swap files
+set directory=$HOME/.vim/swapfiles//
+
 " Color scheme
 " colorscheme vividchalk
 " highlight NonText guibg=#060606

@@ -26,3 +26,6 @@ function ListAllCommands
     ALIASES=`alias | cut -d '=' -f 1`
     echo "$COMMANDS"$'\n'"$ALIASES" | sort -u
 }
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
