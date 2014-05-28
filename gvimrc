@@ -17,3 +17,4 @@ function ID_search()
  execute "next " . x
 endfun
 
+set vb t_vb=

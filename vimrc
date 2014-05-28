@@ -256,3 +256,6 @@ function! Maximize()
 endfunction
 map <Leader>m :call Maximize()<CR>
 map <Leader>mm :set lines=65 columns=225<CR>
+
+- Disable beeping
+set noeb vb t_vb=
