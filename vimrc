@@ -129,6 +129,11 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Inserts the path of the currently edited file into a command
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
+let g:ctrlp_custom_ignore = {
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|(node_modules|bower_components))$',
+  \ 'file': '\v\.(exe|so|dll)$',
+  \ 'link': 'some_bad_symbolic_links',
+  \ }
 
 " Duplicate a selection
 " Visual mode: D
@@ -257,5 +262,5 @@ endfunction
 map <Leader>m :call Maximize()<CR>
 map <Leader>mm :set lines=65 columns=225<CR>
 
-- Disable beeping
+" Disable beeping
 set noeb vb t_vb=
