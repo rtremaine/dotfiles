@@ -1,3 +1,4 @@
 echo "find . -type f -name \"*.swp\" -delete"
+cd ~/.vim/swapfiles
 find . -type f -name "*.swp" -delete
 echo "done"
