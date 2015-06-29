@@ -97,22 +97,22 @@ let mapleader = ","
 map <Leader>R :e doc/README_FOR_APP<CR>
 
 " Leader shortcuts for Rails commands
-map <Leader>m :Rmodel 
-map <Leader>c :Rcontroller 
-map <Leader>v :Rview 
-map <Leader>u :Runittest 
-map <Leader>f :Rfunctionaltest 
-map <Leader>tm :RTmodel 
-map <Leader>tc :RTcontroller 
-map <Leader>tv :RTview 
-map <Leader>tu :RTunittest 
-map <Leader>tf :RTfunctionaltest 
-map <Leader>sm :RSmodel 
-map <Leader>sc :RScontroller 
-map <Leader>sv :RSview 
-map <Leader>su :RSunittest 
-map <Leader>sf :RSfunctionaltest 
-map <Leader>r :Rtree<CR>
+"map <Leader>m :Rmodel 
+"map <Leader>c :Rcontroller 
+"map <Leader>v :Rview 
+"map <Leader>u :Runittest 
+"map <Leader>f :Rfunctionaltest 
+"map <Leader>tm :RTmodel 
+"map <Leader>tc :RTcontroller 
+"map <Leader>tv :RTview 
+"map <Leader>tu :RTunittest 
+"map <Leader>tf :RTfunctionaltest 
+"map <Leader>sm :RSmodel 
+"map <Leader>sc :RScontroller 
+"map <Leader>sv :RSview 
+"map <Leader>su :RSunittest 
+"map <Leader>sf :RSfunctionaltest 
+"map <Leader>r :Rtree<CR>
 map <Leader>f :NERDTreeFind<CR>
 
 " Hide search highlighting
@@ -130,7 +130,7 @@ map <Leader>te :tabe <C-R>=expand("%:p:h") . "/" <CR>
 " Command mode: Ctrl+P
 cmap <C-P> <C-R>=expand("%:p:h") . "/" <CR>
 let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\v[\/](\.(git|hg|svn)|(node_modules|bower_components))$',
+  \ 'dir':  '\v[\/](\.(git|hg|svn)|(node_modules|bower_components|vendor|tmp|dist))$',
   \ 'file': '\v\.(exe|so|dll)$',
   \ 'link': 'some_bad_symbolic_links',
   \ }
@@ -157,7 +157,7 @@ nmap <F1> <Esc>
 imap <C-F> <C-R>=expand("%")<CR>
 
 " Maps autocomplete to tab
-imap <Tab> <C-N>
+"imap <Tab> <C-N>
 
 "imap <C-L> <Space>=><Space>
 vmap <C-ws> <C-wn>
@@ -219,8 +219,8 @@ set ignorecase
 set smartcase
 
 " Tags
-let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
-set tags=./tags;
+"let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
+"set tags=./tags;
 
 let g:fuf_splitPathMatching=1
 
@@ -261,6 +261,8 @@ function! Maximize()
 endfunction
 map <Leader>m :call Maximize()<CR>
 map <Leader>mm :set lines=65 columns=225<CR>
+
+execute pathogen#infect()
 
 " Disable beeping
 set noeb vb t_vb=
