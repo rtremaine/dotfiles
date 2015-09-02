@@ -266,3 +266,5 @@ execute pathogen#infect()
 
 " Disable beeping
 set noeb vb t_vb=
+
+let g:vimrubocop_config = '.ruby-style.yml'

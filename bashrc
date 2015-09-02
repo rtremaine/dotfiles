@@ -29,3 +29,9 @@ function ListAllCommands
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+export PS1="\w\$ "
+export DYLD_LIBRARY_PATH=/opt/oracle/instantclient_11_2
+export ORACLE_HOME=/opt/oracle/instantclient_11_2
+
+export NVM_DIR="/Users/ryantremaine/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
