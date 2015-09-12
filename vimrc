@@ -13,6 +13,8 @@ set history=50		" keep 50 lines of command line history
 set ruler		" show the cursor position all the time
 set showcmd		" display incomplete commands
 set incsearch		" do incremental searching
+set relativenumber
+set guifont=Consolas:h13
 
 "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 " Don't use Ex mode, use Q for formatting
@@ -226,19 +228,6 @@ let g:fuf_splitPathMatching=1
 
 let processing_doc_path = "/Applications/Processing.app/Contents/Resources/Java/modes/java/reference"
 
-" Open URL
-command -bar -nargs=1 OpenURL :!open <args>
-function! OpenURL()
-  let s:uri = matchstr(getline("."), '[a-z]*:\/\/[^ >,;:]*')
-  echo s:uri
-  if s:uri != ""
-	  exec "!open \"" . s:uri . "\""
-  else
-	  echo "No URI found in line."
-  endif
-endfunction
-map <Leader>w :call OpenURL()<CR>
-
 set background=dark
 colorscheme solarized
 
@@ -268,3 +257,4 @@ execute pathogen#infect()
 set noeb vb t_vb=
 
 let g:vimrubocop_config = '.ruby-style.yml'
+
