@@ -1,3 +1,19 @@
+" Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim/plugged')
+
+" Declare the list of plugins.
+Plug 'tpope/vim-sensible'
+Plug 'junegunn/seoul256.vim'
+Plug 'kien/ctrlp.vim'
+Plug 'tpope/vim-rails'
+Plug 'ngmy/vim-rubocop'
+Plug 'tpope/vim-pathogen'
+Plug 'godlygeek/tabular'
+Plug 'mileszs/ack.vim'
+
+" List ends here. Plugins become visible to Vim after this call.
+call plug#end()
+
 " based on http://github.com/jferris/config_files/blob/master/vimrc
 
 " Use Vim settings, rather then Vi settings (much better!).
@@ -47,6 +63,8 @@ if has("autocmd")
 
   " Enable soft-wrapping for text files
   autocmd FileType text,markdown,html,xhtml,eruby setlocal wrap linebreak nolist
+  " autocmd BufNewFile,BufRead *.etl   set syntax=ruby
+  au BufNewFile,BufRead,BufReadPost *.etl set syntax=ruby
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
@@ -207,9 +225,6 @@ set hidden
 " change to dir of current file
 " set autochdir
 
-" Snippets are activated by Shift+Tab
-let g:snippetsEmu_key = "<S-Tab>"
-
 " Tab completion options
 " (only complete to the longest unambiguous match, and show a menu)
 set completeopt=longest,menu
@@ -257,4 +272,7 @@ execute pathogen#infect()
 set noeb vb t_vb=
 
 let g:vimrubocop_config = '.ruby-style.yml'
+let NERDTreeShowHidden=1
 
+syn match plog /^.*plog.*/
+hi link plog Comment

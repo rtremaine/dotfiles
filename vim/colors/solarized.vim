@@ -594,6 +594,8 @@ exe "hi Normal"         . s:fg_base0  .s:bg_back   .s:fmt_none
 
 exe "hi Comment"        . s:fg_base01 .s:bg_none   .s:fmt_ital
 "      *Comment         any comment
+exe "hi Commentlight"        . s:fg_base00 .s:bg_none   .s:fmt_ital
+"      *Comment         any comment
 
 exe "hi Constant"       . s:fg_cyan   .s:bg_none   .s:fmt_none
 "exe "hi String"         . s:fg_yellow .s:bg_none   .s:fmt_none
